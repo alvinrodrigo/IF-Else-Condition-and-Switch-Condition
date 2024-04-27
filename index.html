@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-    .div{
-      content-align: center;
-      background-color: grey;
-      color: white;
-    }
-    .h3{
-      font-family: "Courier-New"; 
-    }
-      
-      </style>
+    <head>
+        <style>
+        #inputfield{
+          text-align: left;
+          margin-top: 150px;
+          margin-bottom: 350px;
+          margin-left: 350px;
+          margin-right: 350px;
+          padding: 40px;
+          background-color: rgb(34, 34, 34);
+          font-family: "Courier-New";
+          border-radius: 10px;
+          box-shadow: 1px 1px 20px;
+        }
+
+        #title{
+            font-family:'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: white;
+        }
+
+        .desc{
+            font-family:'Courier New', Courier, monospace;
+            color: white;
+        }
+    
+        </style>
     </head>
 <body>
+    <div id="inputfield">
+        <h1 id="title">Alvin Rodrigo</h1>
 
-<div>
-<h3>Alvin Rodrigo</h3>
+        <p class="desc">Enter a number:</p>
 
-<p>Enter a number:</p>
+        <input id="number">
 
-<input id="number">
+        <button type="button" onclick="myFunction()">Submit</button>
 
-<button type="button" onclick="myFunction()">Submit</button>
-
-<p id="demo"></p>
-</div>
-<script>
-function myFunction() {
-  let x = document.getElementById("number").value;
-  let input;
-  if (x <= -1) {
-    input = "The number is not positive";
-   } else if (x >= 0) {
-    input = "The number is positive"
-  } else {
-    input = "Invalid. Please enter a number di ka nagbabasa.";
-  }
-  document.getElementById("demo").innerHTML = input;
-}
-</script>
+        <p id="demo" class="desc"></p>
+    </div>
+    <script>
+    function myFunction() {
+        let x = document.getElementById("number").value;
+        let input;
+        if (x <= -1) {
+            input = "The number is not positive";
+            } else if (x >= 0) {
+            input = "The number is positive"
+            } else {
+            input = "Invalid. Please enter a number di ka nagbabasa.";
+            }
+         document.getElementById("demo").innerHTML = input;
+        }
+    </script>
 
 </body>
 </html> 
